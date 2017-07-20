@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 9ed20adcfd3f87d4b831a66899a80c86
+timeCreated: 1500199928
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Cabaletta
+  fontNames:
+  - Cabaletta
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
