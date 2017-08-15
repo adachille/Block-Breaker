@@ -14,13 +14,10 @@ public class LoseCollider : MonoBehaviour {
             lm.LoadLevel("Lose");
         } else
         {
-            // Decrement lives left, create a new ball and destroy the old ball
+            // Decrement lives left, reset ball
             Paddle.livesLeft--;
 
-            Ball ball = new Ball();
-            Ball.Instantiate(ball);
-
-            DestroyObject(FindObjectOfType<Ball>());
+            FindObjectOfType<Ball>().ResetBall();
         }
     }
 }

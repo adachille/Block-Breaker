@@ -58,10 +58,10 @@ public class Ball : MonoBehaviour {
 
 
             // Maintains -8 <= x.velocity <= 8    and    -8 <= y.velocity <= 10
-            if (newX > 8) { newX = 8; }
-            if (newY > 8) { newY = 10; }
-            if (newX < -8) { newX = -8; }
-            if (newY < -8) { newY = -8; }
+            if (newX > 6) { newX = 6; }
+            if (newY > 8) { newY = 8; }
+            if (newX < -6) { newX = -6; }
+            if (newY < -6) { newY = -6; }
 
             // Maintains the balls speed 
             rb.velocity = new Vector2(newX, newY);
@@ -69,8 +69,12 @@ public class Ball : MonoBehaviour {
             {
                 rb.velocity += rb.velocity.normalized * 2.0f;
             }
-
-            print(rb.velocity);
         }
+    }
+    
+    // Returns the ball to the paddle after a life is lost
+    public void ResetBall()
+    {
+        hasStarted = false;
     }
 }
