@@ -31,4 +31,12 @@ public class LevelManager : MonoBehaviour {
             LoadNextLevel();
         }
     }
+
+    public void StartGame()
+    {
+        ScoreKeeper.ResetScore();
+        Paddle.livesLeft = 3;
+        SceneManager.LoadScene("Level_01");
+    }
+
 }

@@ -24,7 +24,8 @@ public class Ball : MonoBehaviour {
         if (!hasStarted)
         {
             // Lock ball relative to paddle
-            this.transform.position = paddle.transform.position + paddleToBallVector;
+            Vector3 offset = new Vector3(0, 0.125f, 0);
+            this.transform.position = paddle.transform.position + paddleToBallVector + offset;
 
             // Wait for mouse to start game or auto start it
             if (Input.GetMouseButtonDown(0) || paddle.autoPlay)

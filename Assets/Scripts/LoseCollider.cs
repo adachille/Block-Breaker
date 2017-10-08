@@ -6,11 +6,11 @@ public class LoseCollider : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider)
     {
-        if (Paddle.livesLeft <= 0)
+        if (Paddle.livesLeft <= 1)
         {
             // Resets the breakable count so that it doesn't carry over games
-            Brick.breakableCount = 0;
             LevelManager lm = FindObjectOfType<LevelManager>();
+            Brick.breakableCount = 0;
             lm.LoadLevel("Lose");
         } else
         {

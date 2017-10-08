@@ -18,10 +18,10 @@ public class Paddle : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        // This means the user has 5 total lives
+        // This means the user has 3 total lives
         if (livesLeft <= 0)
         {
-            livesLeft = 4;
+            livesLeft = 3;
         }
 
         mousePosXInBlocks = 0.0f;

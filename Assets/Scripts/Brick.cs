@@ -34,6 +34,7 @@ public class Brick : MonoBehaviour {
         // Destroys brick if necessary
         if (timesHit >= maxHits) {
             breakableCount--;
+            ScoreKeeper.Score();
             Destroy(gameObject);
         }
 
@@ -46,11 +47,13 @@ public class Brick : MonoBehaviour {
 
     void LoadSprites()
     {
-
         int spriteIndex = timesHit - 1;
+        if (spriteIndex >= hitSprites.Length) { return; }
+        Debug.Log(spriteIndex);
 
         if (hitSprites[spriteIndex] != null)
         {
+            Debug.Log("Changing sprite");
             this.GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
         } else
         {
